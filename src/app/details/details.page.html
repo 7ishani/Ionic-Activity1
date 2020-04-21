@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngIf="username">
+    <ion-card-header>
+      
+
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-label class="testclass" color="Dark">Name: </ion-label>
+      <ion-item >
+        {{ username }}
+      </ion-item>
+    </ion-card-content>
+
+  </ion-card>
+  </ion-content>
