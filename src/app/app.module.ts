@@ -9,24 +9,28 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SecureStorage } from '@ionic-native/secure-storage/ngx';
+import { SecureStorageObject} from '@ionic-native/secure-storage/ngx';
 
 @NgModule({
   declarations: [AppComponent],
 
-  entryComponents: [],
+  entryComponents: [
+    
+  ],
 
   imports: [BrowserModule, 
     IonicModule.forRoot({
       
     }), 
-    AppRoutingModule
+    AppRoutingModule,
+    
   ],
 
   providers: [
     StatusBar,
     SplashScreen,
     SecureStorage,
- 
+    SecureStorageObject,
     
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],

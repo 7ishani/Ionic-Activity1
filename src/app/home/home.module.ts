@@ -5,6 +5,9 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
+import { SecureStorage } from '@ionic-native/secure-storage/ngx';
+import { SecureStorageObject} from '@ionic-native/secure-storage/ngx';
+
 
 @NgModule({
   imports: [
@@ -17,6 +20,11 @@ import { HomePage } from './home.page';
         component: HomePage
       }
     ])
+  ],
+
+  providers: [
+    
+    
   ],
   declarations: [HomePage]
 })
