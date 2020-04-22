@@ -11,6 +11,7 @@ import { DataService } from '../services/data.service';
 export class HomePage{
 
   private username:string;
+  private getusername;
 
   //constructor(private router: Router, private dataService: DataService,private secureStorage: SecureStorage){}
   
@@ -47,37 +48,42 @@ export class HomePage{
       
   }*/
   
-  public createSecureStorage():void{
-
-    console.log("create function ");
+  
+  submit()
+  {
+   
+    console.log("1.create_function ");
     
     this.secureStorage.create('my_store_name')
       .then((storage: SecureStorageObject) => {
 
-          console.log("set key");
+          console.log("2.set_key");
 
-     storage.set('key', 'value')
+     storage.set('key2', this.username)
        .then(
         data => console.log(data),
          error => console.log(error)
      );
 
-    
-  });
-  }
+     console.log("3.get_key");
 
-  submit()
-  {
-   
+     storage.get('key2')
+     .then(
+       data => console.log(this.getusername=data),
+       error => console.log(error)
+   );
+     
+  });
+
     let navigationExtras: NavigationExtras = {
       state: {
-        user: this.username 
+        user: this.getusername 
       }
     };
 
     this.router.navigate(['details'], navigationExtras);
 
-    this.createSecureStorage();
+    
   }
   
 }
