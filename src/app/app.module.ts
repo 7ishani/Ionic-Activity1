@@ -30,7 +30,7 @@ import { SecureStorageObject} from '@ionic-native/secure-storage/ngx';
     StatusBar,
     SplashScreen,
     SecureStorage,
-    SecureStorageObject,
+    
     
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
